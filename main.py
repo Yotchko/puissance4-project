@@ -81,6 +81,37 @@ print("Victoire horizontale X :", check_horizontal_win(grid, "X"))
 
 
 
+# ETAPE 4 - partie 1
+# Exemple : test de victoire verticale
+grid = create_grid()  # On repart d'une grille vide
+insert_token(grid, 2, "O")
+insert_token(grid, 2, "O")
+insert_token(grid, 2, "O")
+insert_token(grid, 2, "O")
+
+print("\nGrille après insertion pour test victoire verticale :")
+print_grid(grid)
+print("Victoire verticale O :", check_vertical_win(grid, "O"))
+
+
+# ETAPE 4 partie 2
+# Exemple : test de victoire verticale
+grid = create_grid()  # On repart d'une grille vide
+insert_token(grid, 2, "O")
+insert_token(grid, 2, "O")
+insert_token(grid, 2, "O")
+insert_token(grid, 2, "O")
+
+print("\nGrille après insertion pour test victoire verticale :")
+print_grid(grid)
+print("Victoire verticale O :", check_vertical_win(grid, "O"))
+
+
+
+
+
+
+
 
 
 
