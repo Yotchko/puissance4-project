@@ -161,7 +161,7 @@ def check_win(grid, token):
             check_vertical_win(grid, token) or
             check_diagonal_win(grid, token))
 
-#Etape6 partie 2
+#Etape 6 partie 2
 # Exemple : test de victoire avec check_win globale
 grid = create_grid()
 
@@ -176,7 +176,34 @@ print_grid(grid)
 print("Victoire X :", check_win(grid, "X"))
 
 
+# ETAPE 7 
+# Lance une partie avec deux joueurs (X et O) qui jouent chacun leur tour
+def play_game():
+    grid = create_grid()
+    game_over = False
+    current_player = "X"  # Le joueur X commence
 
+    while not game_over:
+        print_grid(grid)
+        print(f"\nTour du joueur {current_player}")
+
+        # Choix de la colonne (saisi par le joueur)
+        col = int(input(f"Joueur {current_player}, choisis une colonne (0-{COLS - 1}): "))
+
+        # Insertion du jeton
+        if insert_token(grid, col, current_player):
+            # Vérifie si le joueur a gagné
+            if check_win(grid, current_player):
+                print_grid(grid)
+                print(f"\nVictoire du joueur {current_player} 🎉")
+                game_over = True
+            else:
+                # Changement de joueur
+                current_player = "O" if current_player == "X" else "X"
+        else:
+            print("Colonne pleine, choisis une autre !")
+
+# ETAPE 8 
 
 
 
