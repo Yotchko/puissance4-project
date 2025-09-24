@@ -153,7 +153,27 @@ print("Victoire diagonale X :", check_diagonal_win(grid, "X"))
 
 
 
+# ETAPE 6 partie 1
 
+# Vérifie si un joueur a gagné (horizontal, vertical ou diagonal)
+def check_win(grid, token):
+    return (check_horizontal_win(grid, token) or
+            check_vertical_win(grid, token) or
+            check_diagonal_win(grid, token))
+
+#Etape6 partie 2
+# Exemple : test de victoire avec check_win globale
+grid = create_grid()
+
+# Créer une ligne horizontale pour X
+insert_token(grid, 0, "X")
+insert_token(grid, 1, "X")
+insert_token(grid, 2, "X")
+insert_token(grid, 3, "X")
+
+print("\nTest check_win globale :")
+print_grid(grid)
+print("Victoire X :", check_win(grid, "X"))
 
 
 
