@@ -107,6 +107,50 @@ print_grid(grid)
 print("Victoire verticale O :", check_vertical_win(grid, "O"))
 
 
+#ETAPE 5 partie 1
+# Vérifie si un joueur a 4 jetons alignés en diagonale
+def check_diagonal_win(grid, token):
+    # Vérifie les diagonales  (haut-gauche → bas-droit)
+    for row in range(ROWS - 3):
+        for col in range(COLS - 3):
+            if (grid[row][col] == token and
+                grid[row + 1][col + 1] == token and
+                grid[row + 2][col + 2] == token and
+                grid[row + 3][col + 3] == token):
+                return True
+
+    # Vérifie les diagonales  (bas-gauche → haut-droit)
+    for row in range(3, ROWS):
+        for col in range(COLS - 3):
+            if (grid[row][col] == token and
+                grid[row - 1][col + 1] == token and
+                grid[row - 2][col + 2] == token and
+                grid[row - 3][col + 3] == token):
+                return True
+
+    return False
+
+# ETAPE 5 partie 2
+
+# Exemple : test de victoire diagonale
+grid = create_grid()  # Grille vide
+
+# Créer une diagonale ↘️ avec des "X"
+insert_token(grid, 0, "X")
+insert_token(grid, 1, "O")  # jeton de l'autre joueur pour "caler"
+insert_token(grid, 1, "X")
+insert_token(grid, 2, "O")
+insert_token(grid, 2, "O")
+insert_token(grid, 2, "X")
+insert_token(grid, 3, "O")
+insert_token(grid, 3, "O")
+insert_token(grid, 3, "O")
+insert_token(grid, 3, "X")
+
+print("\nGrille après insertion pour test victoire diagonale :")
+print_grid(grid)
+print("Victoire diagonale X :", check_diagonal_win(grid, "X"))
+
 
 
 
