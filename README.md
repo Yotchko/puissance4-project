@@ -4,7 +4,7 @@ C'est un jeu en Python. 2 joueurs s'affrontent pour aligner 4 jetons horizontale
 
 ## Comment jouer
 1. Cloner le repository : `git clone <URL_DU_REPO>`
-2. Aller dans le dossier : `cd tetris-project`
+2. Aller dans le dossier : `cd puissance4-project`
 3. Lancer le jeu : `python main.py`
 
 ## Fonctionnalités
