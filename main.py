@@ -254,6 +254,19 @@ if __name__ == "__main__":
     # Ici on va lancer la boucle du jeu (gestion des tours des joueurs, victoires, égalité)
 
 
+# ETAPE 10 : Détection du match nul
+def is_full(grid):
+    # La grille est pleine si aucune case est vide
+    for row in grid:
+        if " " in row:
+            return False
+    return True
+    
+     # Vérification match nul
+if is_full(grid):
+    print("Match nul ! La grille est pleine.")
+    break
+
 
 
 
