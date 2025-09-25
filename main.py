@@ -242,8 +242,8 @@ if __name__ == "__main__":
         else:
             print(" Colonne pleine, choisis une autre !")
 
-# ETAPE 9 
 
+# ETAPE 9 : Boucle principale du jeu
 if __name__ == "__main__":
     print("===== Bienvenue dans le jeu Puissance 4 =====")
     print("Deux joueurs s'affrontent : X et O")
@@ -251,7 +251,8 @@ if __name__ == "__main__":
     
     # Initialisation de la grille
     grid = create_grid()
-    ...
+    # Ici on va lancer la boucle du jeu (gestion des tours des joueurs, victoires, égalité)
+
 
 
 
