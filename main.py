@@ -242,6 +242,17 @@ if __name__ == "__main__":
         else:
             print(" Colonne pleine, choisis une autre !")
 
+# ETAPE 9 
+
+if __name__ == "__main__":
+    print("===== Bienvenue dans le jeu Puissance 4 =====")
+    print("Deux joueurs s'affrontent : X et O")
+    print("Choisissez une colonne entre 0 et 6 pour placer votre jeton.\n")
+    
+    # Initialisation de la grille
+    grid = create_grid()
+    ...
+
 
 
 
