@@ -204,6 +204,43 @@ def play_game():
             print("Colonne pleine, choisis une autre !")
 
 # ETAPE 8 
+if __name__ == "__main__":
+    # Initialisation de la grille
+    grid = create_grid()
+
+    # Jetons des deux joueurs
+    players = ["X", "O"]
+    current_player = 0  # 0 = X, 1 = O
+
+    # Boucle principale de jeu
+    while True:
+        print_grid(grid)  # Affiche la grille actuelle
+
+        # Demande au joueur courant de choisir une colonne
+        col = int(input(f"Joueur {players[current_player]}, choisis une colonne (0-6) : "))
+
+        # Tentative d'insertion du jeton
+        if insert_token(grid, col, players[current_player]):
+            # Vérification des victoires
+            if (
+                check_horizontal_win(grid, players[current_player])
+                or check_vertical_win(grid, players[current_player])
+                or check_diagonal_win(grid, players[current_player])
+            ):
+                print_grid(grid)
+                print(f" Joueur {players[current_player]} a gagné !")
+                break
+
+            # Vérification égalité (grille pleine)
+            if all(grid[0][c] != "." for c in range(COLS)):
+                print_grid(grid)
+                print("Match nul !")
+                break
+
+            # Changement de joueur (X -> O ou O -> X)
+            current_player = 1 - current_player
+        else:
+            print(" Colonne pleine, choisis une autre !")
 
 
 
