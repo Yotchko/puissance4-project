@@ -11,7 +11,7 @@ def create_grid():
     """Crée une grille vide 6x7"""
     return [[" " for _ in range(COLS)] for _ in range(ROWS)]
 
-# ETAPE 1 partie 3 : Affichage de la grille
+# ETAPE 1 partie 2 : Affichage de la grille
 def print_grid(grid):
     """Affiche la grille dans la console"""
     for row in grid:
