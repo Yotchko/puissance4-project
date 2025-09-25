@@ -13,3 +13,12 @@ C'est un jeu en Python. 2 joueurs s'affrontent pour aligner 4 jetons horizontale
 - Détection des victoires (horizontal, vertical, diagonal)
 - Détection d'un match nul
 - Tour par tour entre deux joueurs
+
+## Historique des commits
+- feat: création de la grille et insertion de jetons
+- feat: détection victoire horizontale, verticale et diagonale
+- refactor: ajustements et nettoyage du code
+- chore: README et détails du projet
+
+## Auteur
+MIKOV Théodor B2-CS3 
